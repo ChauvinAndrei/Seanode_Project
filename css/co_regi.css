@@ -4,7 +4,7 @@
     display: flex;justify-content: center;align-items: center;
     margin-block-start: 2.5em;
     margin-block-end: 3em;
-    margin-inline: 8vw;
+    margin-inline: 1.55em;
     max-height: 500px;  
 }
 
@@ -26,7 +26,6 @@
    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.589);
    margin-block: .1rem;
    width: 100%;
-
 }
 
 #connexion_calq fieldset{
@@ -40,7 +39,7 @@
    -webkit-box-shadow: 15px 15px 10px -13px #031a3a inset,  0 3px 10px -5px #000000;
    box-shadow: 15px 15px 10px -13px #031a3a inset,  0 3px 10px -5px #000000; 
    border: 1px solid #ccc; 
-   padding-inline: 1em;
+   padding-inline: 1.5em;
    padding-block: .5em 2em;
    border-radius: 0; 
 }
@@ -106,7 +105,8 @@ input[type="text"],input[type="password"],input[type="email"]{
    background: var(--gradient);
    border: 1px solid #ccc;
    color: var(--white);
-   width: 50%;min-height: 25px;
+   width: 100%;
+   min-height: 25px;
    border-radius: 3px;
    margin-block-start: 1em;
    padding-bottom: 2px;
@@ -140,7 +140,7 @@ input[type="text"],input[type="password"],input[type="email"]{
    width: 20px;height: 18px;
    filter: invert(37%) sepia(16%) saturate(877%) hue-rotate(176deg) brightness(92%) contrast(89%);
    position: absolute;
-   right: 10%;
+   right: 8%;
    bottom: 1.1em;
 }
 #register_label::before{
@@ -175,10 +175,19 @@ input[type="text"],input[type="password"],input[type="email"]{
 }
  /*CONNEXION END*/
 @media (min-width: 500px){
-    #connexion_calq  form label input,#connexion form  label select{
-        width: 60%;
-    }
-    .icon_lab .password_icon{
-        right:22%;
-     }
+   #connexion_calq fieldset{
+      padding-inline: 1em;
+   }
+   #connexion_calq{
+      margin-inline: 8vw;
+   }
+   #connexion_calq input[type="submit"]{
+      width: 50%;
+   }
+   #connexion_calq  form label input,#connexion form  label select{
+      width: 60%;
+   }
+   .icon_lab .password_icon{
+      right:21%;
+   }
 } 
