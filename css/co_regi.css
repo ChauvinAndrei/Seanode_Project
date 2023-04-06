@@ -20,9 +20,13 @@
 }
 
 .form-contain > label{
+   font-size: .9em;
    font-weight: bold;
+   letter-spacing: .0555em;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.589);
+   margin-block: .1rem;
    width: 100%;
-   margin-block: .1rem
+
 }
 
 #connexion_calq fieldset{
@@ -35,21 +39,20 @@
    text-align: center;
    -webkit-box-shadow: 15px 15px 10px -13px #031a3a inset,  0 3px 10px -5px #000000;
    box-shadow: 15px 15px 10px -13px #031a3a inset,  0 3px 10px -5px #000000; 
-   border: 1px solid #bdcee6; 
+   border: 1px solid #ccc; 
    padding-inline: 1em;
-   padding-block-end: 1.7em;
-   margin-block-start: .5rem;
+   padding-block: .5em 2em;
    border-radius: 0; 
 }
 
 legend{
    color: var(--white);
    text-align: left;
-   padding-inline: 10px;
-   letter-spacing: 1px;
    background: var(--gradient);
    outline: 1px solid #5977a4;
-   border-radius: 2px;
+   border-radius: 1px;
+   padding-inline: 1em;
+   letter-spacing: .0555em;
 }
 
 #connexion_calq label input{
@@ -78,7 +81,7 @@ input[type="text"],input[type="password"],input[type="email"]{
     border: 1px solid orange;
 }
 #connexion_calq label input:valid{
-   color: white;
+   color: var(--white);
    border: 1px solid rgb(147, 190, 255);
    background-color: var(--blue);
 }
@@ -101,11 +104,12 @@ input[type="text"],input[type="password"],input[type="email"]{
 #connexion_calq input[type="submit"]{
    display: inline-block;
    background: var(--gradient);
-   border: 1px solid var(--white);
+   border: 1px solid #ccc;
    color: var(--white);
    width: 50%;min-height: 25px;
    border-radius: 3px;
-   margin-block-start: 1em;padding-bottom: 2px;
+   margin-block-start: 1em;
+   padding-bottom: 2px;
    cursor: pointer
 }
 #connexion_calq input[type="submit"]:active{
@@ -137,7 +141,7 @@ input[type="text"],input[type="password"],input[type="email"]{
    filter: invert(37%) sepia(16%) saturate(877%) hue-rotate(176deg) brightness(92%) contrast(89%);
    position: absolute;
    right: 10%;
-   bottom: 1em;
+   bottom: 1.1em;
 }
 #register_label::before{
     position: absolute;
