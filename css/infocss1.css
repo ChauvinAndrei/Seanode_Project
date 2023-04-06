@@ -670,10 +670,9 @@ header a {
     -o-transition: 200ms ease;
     transition: 200ms ease;
 }
-#lien_header h2,#lien_header ul li{
-    color:var(--blue);
-}
+
 #lien_header h2{
+    color: var(--blue);
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 0.020rem;
@@ -687,7 +686,7 @@ header a {
     list-style: none;
     font-size: 0.9rem;
     font-size: clamp(0.8rem, 3vw, .9rem);
-    line-height: 1.5
+    line-height: 1.5;
 }
 #lien_header li li {
     text-align: justify;
@@ -702,10 +701,6 @@ header a {
     border-bottom: 5px solid transparent;
     border-left: 10px solid #052a5a;
     margin-inline-end: .5rem
-}
-
-.listcolor {
-    color: #072349;
 }
 
 /* NAV */
