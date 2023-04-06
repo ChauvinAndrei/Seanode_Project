@@ -412,10 +412,10 @@ button:hover, a:hover:not(.menu a), p a:hover, a:hover{
     display: inline-block;
     vertical-align: middle;
     background: #072249be;
-    border: 1px solid var(--white);
     color: var(--white);
     margin-inline: 1em;
     padding-inline: 5px;
+    padding-block-start: .1rem;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
@@ -423,6 +423,8 @@ button:hover, a:hover:not(.menu a), p a:hover, a:hover{
 }
 
 .marquee-content {
+    line-height: 1;
+    font-size: clamp(.9rem, 3vw, 1rem);
     list-style: none;
     height: 100%;
     display: flex;
@@ -548,6 +550,7 @@ button:hover, a:hover:not(.menu a), p a:hover, a:hover{
 }
 
 #logo_ span:first-child {
+    font-weight: 400;
     letter-spacing: .1rem;
     text-shadow: 1px 1px 5px var(--blue);
 }
@@ -557,7 +560,6 @@ h3,
 .marquee-content li,
 span{
     color: var(--white);
-    font-weight: lighter
 }
 
 /*SCROLLllBAR*/
@@ -685,7 +687,7 @@ header a {
     text-align: center;
     list-style: none;
     font-size: 0.9rem;
-    font-size: clamp(0.8rem, 3vw, .9rem);
+    font-size: clamp(0.8rem, 4vw, .9rem);
     line-height: 1.5;
 }
 #lien_header li li {
@@ -1133,7 +1135,6 @@ input[type="search"] {
     position: absolute;
     border: 1px var(--blue) solid;
     font-size: 1em;
-    font-weight: lighter;
     opacity: 0;
     border: 0;
     outline: none;
@@ -1904,7 +1905,7 @@ main h2 {
     width: 40px;height: 20px;
 }
 #caret_down{
-    top: 0;left: 0;
+    top: 5px;left: 0;
 }
 #caret_up{
     bottom: 20px;left: 0;
@@ -2026,7 +2027,6 @@ main h2 {
     padding-block: .7em; 
     background: transparent;
     font-size: .9em;
-    font-weight: lighter;
     outline: 1px solid var(--blue);
     border: 1px solid var(--grey-blue);
     min-width: 70px;
@@ -2088,7 +2088,6 @@ td .box_line {
 .box_line span{
     letter-spacing: 0;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.51);
-    font-weight: 100;
 }
 
 td a:not(.to_exclude) {
@@ -2566,6 +2565,9 @@ td a:not(.to_exclude) {
     }
 }
 @media (max-width: 500px){
+    main{
+        padding-inline: 0;
+    }
     #bb-content{
         margin-inline-end: 4.5%;
     }
@@ -2616,7 +2618,8 @@ td a:not(.to_exclude) {
     padding: 1em;
    }
 }
-@media(max-width: 800px){
+
+@media (max-width: 800px){
     main{
         width: auto;
         padding-inline: 2vw;
@@ -2906,7 +2909,7 @@ footer small {
     border-bottom: 1px solid #ddd;
 }
 .table_exchange_comparison th,.table_exchange_comparison tr,.table_exchange_comparison td{
-    font-weight:lighter;
+    font-weight:400;
     text-shadow: 1px 1px 1px rgb(7 35 73 / 51%);
 }
 .tr_exchange_comparison {
@@ -2954,7 +2957,7 @@ footer small {
     opacity: 1;visibility: hidden;
     content: "copied!";
     position: absolute;
-    font-weight: lighter;
+    font-style: oblique;
     font-size: 10px;
     letter-spacing: 1px;
     padding-inline: 3px;
@@ -3020,7 +3023,6 @@ footer small {
 .h1_article{
     margin-inline: auto;
     position: relative;
-    font-weight: lighter;
     align-self: center;
     text-align: center;
     overflow: hidden;
@@ -4258,7 +4260,6 @@ button.categorie_open:nth-of-type(3){
     align-items: center; 
     justify-content: space-between;
     text-align: left;
-    
     line-height: 1.1;
 }
 .box_number_info{
@@ -4270,7 +4271,8 @@ button.categorie_open:nth-of-type(3){
     max-width: 100%; 
     padding-inline-end: 10px;
     border-right: 1px solid var(--grey-blue);
-    width: 40px;height: 40px; 
+    width: 40px;
+    height: 40px; 
 }
 .box_span{
     margin-inline-start: 15px;
@@ -4289,20 +4291,21 @@ button.categorie_open:nth-of-type(3){
     text-overflow: ellipsis;
 }
 .box_courb-img_info span:nth-of-type(1){
-    font-weight: 500;
-    font-size: 22px;
+    font-size: 1.3rem;
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
 }
 .box_courb-img_info span:nth-of-type(2){
-    font-weight: 100;
     display: block;
-    font-size: 12px; 
+    font-size: .8rem; 
+    font-size: clamp(.7rem, 3vw, .8rem);
 }
 
 .number_info{
     display: flex;
     justify-content: flex-end;
     font-weight: 900;
-    font-size: 22px;
+    font-size: 1.3rem;
+    font-size: clamp(1.2rem, 3vw, 1.3rem);
 }
 .number_info span {
     color: var(--blue);
