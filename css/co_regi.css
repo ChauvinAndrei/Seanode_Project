@@ -1,0 +1,180 @@
+/*CONNEXION / REGISTER*/
+
+ #connexion_calq{
+    display: flex;justify-content: center;align-items: center;
+    margin-block-start: 2.5em;
+    margin-block-end: 3em;
+    margin-inline: 8vw;
+    max-height: 500px;  
+}
+
+#connexionform{
+   position: relative;
+    display: flex;flex-flow: column;justify-content: center;align-items: center;
+    width: min(600px - 1vw);
+    height: min(300px - 1vw);
+    color: var(--white);
+    border-radius: 3px;
+    word-spacing: 1px;
+    text-align: center;float: left; 
+}
+
+.form-contain > label{
+   font-weight: bold;
+   width: 100%;
+   margin-block: .1rem
+}
+
+#connexion_calq fieldset{
+   display: flex;flex-flow: column nowrap;justify-content: center;align-items: center;
+   position: relative;
+   width: 100%;
+   height: 100%;
+   background: -webkit-linear-gradient(45deg, var(--blue), var(--grey-blue));
+   background: var(--gradient);  
+   text-align: center;
+   -webkit-box-shadow: 15px 15px 10px -13px #031a3a inset,  0 3px 10px -5px #000000;
+   box-shadow: 15px 15px 10px -13px #031a3a inset,  0 3px 10px -5px #000000; 
+   border: 1px solid #bdcee6; 
+   padding-inline: 1em;
+   padding-block-end: 1.7em;
+   margin-block-start: .5rem;
+   border-radius: 0; 
+}
+
+legend{
+   color: var(--white);
+   text-align: left;
+   padding-inline: 10px;
+   letter-spacing: 1px;
+   background: var(--gradient);
+   outline: 1px solid #5977a4;
+   border-radius: 2px;
+}
+
+#connexion_calq label input{
+  display: block; 
+  text-align: center;
+  width: 90%;
+  font-size: .8rem;
+  margin: 5px auto;
+  padding: 10px;
+}
+
+input[type="text"],input[type="password"],input[type="email"]{   
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   -webkit-border-radius: 9px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   box-shadow: 0 0 2px 1px var(--grey-blue) inset;
+}
+#connexion_calq label input:invalid{ 
+    outline: 0;
+}
+#connexion_calq label input:focus{
+   outline: 0; 
+    border: 1px solid orange;
+}
+#connexion_calq label input:valid{
+   color: white;
+   border: 1px solid rgb(147, 190, 255);
+   background-color: var(--blue);
+}
+#connexion_calq form:valid input[type="submit"]{
+   color: greenyellow;
+   border: 1px solid rgb(147, 190, 255);
+   animation: valid 1s ease;
+}
+@keyframes valid {
+   0%{
+      box-shadow: 0 0 5px 1px greenyellow;
+   }
+   100%{    
+      box-shadow: 0 0 5px 1px greenyellow;
+   }
+}
+::placeholder,.select select{
+   color: #1f1d1d;
+}
+#connexion_calq input[type="submit"]{
+   display: inline-block;
+   background: var(--gradient);
+   border: 1px solid var(--white);
+   color: var(--white);
+   width: 50%;min-height: 25px;
+   border-radius: 3px;
+   margin-block-start: 1em;padding-bottom: 2px;
+   cursor: pointer
+}
+#connexion_calq input[type="submit"]:active{
+   color: rgba(102, 255, 47, 0.811);
+   -moz-transform: scale(0.9);
+   -webkit-transform: scale(0.9);
+   -ms-transform: scale(0.9);
+   -o-transform: scale(0.9);
+   transform: scale(0.9);
+   -moz-transition: transform 200ms ease;
+   -webkit-transition: transform 200ms ease;
+   -o-transition: transform 200ms ease;
+   transition: transform 200ms ease
+}
+#connexion_calq input[type="submit"]:hover{
+   outline: 1px solid rgb(35, 117, 241);
+}
+.icon_lab{
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 100%;
+} 
+.icon_lab .password_icon{
+   cursor: pointer;
+   display: inline-block;
+   vertical-align: middle;
+   width: 20px;height: 18px;
+   filter: invert(37%) sepia(16%) saturate(877%) hue-rotate(176deg) brightness(92%) contrast(89%);
+   position: absolute;
+   right: 10%;
+   bottom: 1em;
+}
+#register_label::before{
+    position: absolute;
+    display: inline-block;
+    font-size: 12px;
+    text-align: center;
+    white-space: nowrap;overflow: hidden;
+    content:"Must be at least 8 characters";
+    bottom: -1.65em;
+    left: 0;
+    right: 0;
+    color: #6980a0;
+    font-weight: lighter;
+}
+#form-lien{
+   display: block;
+}
+#connexionform a{
+   text-decoration: none;
+   position: absolute;
+   bottom: 10px;right: 10px;
+   display: inline-block;
+   font-size: 12px;
+   font-size: clamp(11px, 1vw, 12px);
+   margin-inline: 10px;
+   color: #6980a0;
+}
+#connexionform a:hover{
+   color: orange;
+   text-decoration: underline;
+}
+ /*CONNEXION END*/
+@media (min-width: 500px){
+    #connexion_calq  form label input,#connexion form  label select{
+        width: 60%;
+    }
+    .icon_lab .password_icon{
+        right:22%;
+     }
+} 
