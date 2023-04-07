@@ -377,7 +377,7 @@ button:hover, a:hover:not(.menu a), p a:hover, a:hover{
 }
 
 #marquee_box {
-    box-shadow: 0 0 2px 1px #072349 inset;
+    box-shadow: 0 0 2px 1px #072249a6 inset;
     background: var(--gradient);
     width: var(--marquee-width);
     height: var(--marquee-height);
@@ -416,7 +416,7 @@ button:hover, a:hover:not(.menu a), p a:hover, a:hover{
     box-shadow: 1px 1px 1px rgba(204, 204, 204, 0.747), 0 -1px 2px var(--grey-blue) inset;
     margin-inline: 1em;
     padding-inline: 5px;
-    padding-block-start: .1rem;
+    padding-block-start: .2rem;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     -o-transition: all 300ms ease;
