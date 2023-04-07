@@ -2533,11 +2533,7 @@ td a:not(.to_exclude) {
        color: var(--white);
     }
     .table_info{
-        border-spacing: 3px;
-    }
-    .table_calq .tr_scroll{
-        height: 71.5px;
-        scroll-margin-block-end: 4px;
+        border-spacing: 2px;
     }
     .th_date:first-of-type{
         width: 60px;
