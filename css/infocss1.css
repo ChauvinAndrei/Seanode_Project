@@ -413,6 +413,7 @@ button:hover, a:hover:not(.menu a), p a:hover, a:hover{
     vertical-align: middle;
     background: #072249be;
     color: var(--white);
+    box-shadow: 1px 1px 1px rgba(204, 204, 204, 0.747), 0 -1px 2px var(--grey-blue) inset;
     margin-inline: 1em;
     padding-inline: 5px;
     padding-block-start: .1rem;
@@ -2468,13 +2469,16 @@ td a:not(.to_exclude) {
     left: 0;
     top: 0;
     font-size: .8rem;
+    font-style: italic;
     padding: 1px;
     text-align: justify;
     word-break: keep-all;
     -ms-word-break: keep-all;
-    -webkit-filter: drop-shadow(0px 10px 4px #072249e3);
-    filter:drop-shadow(0px 10px 4px #072249e3);
-    background: linear-gradient(-10deg, transparent 30%,#072249e3 , var(--grey-blue) 100%);
+    -webkit-filter: drop-shadow(0 5px 4px #072249e7);
+    filter:drop-shadow(0 5px 4px #072249e7);
+    background: linear-gradient(10deg,#072249e7 20%,transparent 100%);
+    -webkit-text-shadow: 1px 1px 1px rgb(7 35 73 / 51%); 
+    text-shadow: 1px 1px 1px rgb(7 35 73 / 51%);
     color: var(--white);
     width: 100%
 }
@@ -2482,14 +2486,13 @@ td a:not(.to_exclude) {
 ._main-inline>h3 {
     position: absolute;
     bottom: 0;
-    font-size: .9em;
-    letter-spacing: 1px;
+    font-size: 1rem;
     width: 100%;
-    height: 1.5rem;
+    height: 1.5em;
     padding-top: 5px;
-    -webkit-filter: drop-shadow(0px 10px 4px #072249e3);
-    filter:drop-shadow(0px 10px 4px #072249e3);
-    background: linear-gradient(-10deg,#072249e3 ,var(--grey-blue) ,transparent 100%);
+    -webkit-filter: drop-shadow(0 10px 4px #072249e7);
+    filter:drop-shadow(0 10px 4px #072249e7);
+    background: linear-gradient(-10deg,#072249e7 ,transparent 100%);
     -webkit-text-shadow: 1px 1px 1px rgb(7 35 73 / 51%); 
     text-shadow: 1px 1px 1px rgb(7 35 73 / 51%);
     color: var(--white);
