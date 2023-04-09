@@ -123,7 +123,7 @@ const btnScroll = document.getElementById('btnscroll');
 const navSlide = document.getElementById('nav-slide');
 
 const reveals = document.querySelectorAll(".slide_scroll");
-const SlideBoost = [...document.querySelectorAll('#_main, #_OptslideBox1')];
+const SlideBoost = document.querySelectorAll('#_main, #_OptslideBox1, #_OptslideBox2');
 
 var windowHeight = window.innerHeight;
 let elementTop, elementVisible;
@@ -1006,107 +1006,5 @@ function Anim_Show_More_Info () {
 
 Anim_Show_More_Info ()
 
-//////////////////////////////////////////////////
-
-/////////////////////////////////////////////////
-
-const boitier_courbe_calq = document.querySelector('.boitier_courbe_calq')
-const percent_info = [...document.querySelectorAll('.percent_info')];
-const boitier_courbe_info = document.querySelectorAll('.boitier_courbe_info');
-
-function Scroll_auto ()  { 
-
-const percent_info_InnerHTML = Array.from(document.querySelectorAll('.percent_info')).map(el => el.textContent.replace(/ |\n/g,''));
- 
-
-let id = null;
-let lastScrollValue = 0
-let double_lastScrollValue = 0
-let boitier_courbe_height;
-
-  boitier_courbe_height = boitier_courbe_info[1].getBoundingClientRect().height;
-
-
-let scrollOptions = { top: boitier_courbe_height, behavior: 'smooth' }
-
-let intScroll = window.setInterval(() => {
-  double_lastScrollValue = lastScrollValue;
-  lastScrollValue = boitier_courbe_calq.scrollTop;
-
-  if (double_lastScrollValue > 0 && double_lastScrollValue == lastScrollValue) {
-    boitier_courbe_calq.scrollBy({ top: boitier_courbe_calq.scrollHeight * -1, behavior: 'smooth' });
-  } else if (boitier_courbe_calq.scrollTop == 0) {
-    boitier_courbe_calq.scrollBy({ top: boitier_courbe_height, behavior: 'smooth' });
-  } else {
-    boitier_courbe_calq.scrollBy(scrollOptions);
-  }
-}, 4000);
-
-boitier_courbe_calq.addEventListener('scroll', () => {clearInterval(id)});
-
- for (var i = 0; i < percent_info_InnerHTML.length; i++){
-    
-  if (percent_info_InnerHTML[i].includes("-")){
-    percent_info[i].classList.add('negative_')
-  }else{
-    percent_info[i].classList.add('positive_')
-  }
-
- }
-
-
- const callback = (entries) => {
-
-  entries.forEach((entry) => {
-
-    if (entry.isIntersecting){
-      entry.target.classList.add('active');
-      entry.target.classList.remove('hidden');
-    }else{
-      entry.target.classList.add('hidden')
-      entry.target.classList.remove('active')
-
-    }
-  
-  });
-};
-
- const observer = new IntersectionObserver(callback);
-
- boitier_courbe_info.forEach(intersection => {
- 
-  observer.observe(intersection);
-
- });
-
-}
-
-if (typeof(boitier_courbe_calq) != 'undefined' && boitier_courbe_calq != null){
-  Scroll_auto ();
-}else{
-  Scroll_auto = function(){};
-}
-
-
-const counters = document.querySelectorAll('.counter');
-const speed = 100;
-
-counters.forEach((counter) => {
-  const value = +counter.getAttribute('data-count');
-  const time = value / speed;
-  let currentValue = 0;
-
-  const animate = () => {
-    currentValue += time;
-    if (currentValue >= value) {
-      counter.innerText = value;
-      return;
-    }
-    counter.innerText = Math.ceil(currentValue);
-    setTimeout(animate, 1);
-  }
-  
-  animate();
-});
 
 
