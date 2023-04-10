@@ -1800,22 +1800,41 @@ main h2 {
 #info_img_calq {
     margin-block: 1em;
     position: relative;
-    border-radius: 1%;
+    border: 1px solid var(--white);
+}
+#info_img_calq > a{
+    display: block;
+    z-index: 1000;
+}
+#info_img_calq a::after{
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, var(--blue), #395275a2,transparent 60%);
 }
 
-#info_img_calq > h3{
+#info_img_calq img{
+    filter: sepia(50%) contrast(100%);
+}
+#info_img_calq  a > h3{
     position: absolute;
     top: 0;
     left:0;
     height: fit-content;
-    line-height: 50px;
     font-size: 1.7rem;
     text-align: center;
     overflow: hidden;
-    pointer-events: none;
+    -webkit-filter: drop-shadow(0 10px 4px #072249e7) contrast(150%);
+    filter:drop-shadow(0 10px 4px #072249e7) contrast(150%);
+    width: 100%;
+    z-index: 1;
 }
 
-#info_img_calq > h3::after{
+#info_img_calq a > h3::after{
 	content:'';
     top:0;
 	transform:translateX(100%), rotate(-40deg);
@@ -1850,14 +1869,15 @@ main h2 {
     position: absolute;
     width: 100%;
     left:-.1em;
-    bottom:  .2em;
+    bottom:  0;
     font-size: 4.5rem;
     font-weight: 700;
     font-style: oblique;
     color: white;
     -webkit-filter: drop-shadow(0 10px 4px #072249e7) contrast(150%);
-    filter:drop-shadow(0 10px 4px #072249e7) contrast(150%);
+    filter:drop-shadow(0 10px 4px #072249e7) contrast(150%) opacity(.9);
     pointer-events: none;
+    z-index: 1;
     /* color: rgba(255, 166, 0, 0.526); */
 }
 
@@ -2504,7 +2524,7 @@ td a:not(.to_exclude) {
     color: var(--white);
 }
 ._main-inline > h3,
-#info_img_calq > h3 {
+#info_img_calq a > h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
